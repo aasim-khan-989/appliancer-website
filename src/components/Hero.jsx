@@ -45,6 +45,13 @@ export default function Hero() {
             >
               WhatsApp
             </a>
+
+            <a
+  href="tel:+918888668508"
+  className="bg-white text-violet-700 px-6 py-3 rounded-xl font-semibold"
+>
+  Call Now
+</a>
           </div>
 
         </div>
