@@ -1,6 +1,10 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ProductSection from "../components/ProductSection";
+import Services from "../components/Services";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -19,14 +23,22 @@ export default function Home() {
           <p className="mt-5 text-zinc-600 max-w-3xl">
             We provide complete water treatment,
             cooling solutions, RO systems,
-            industrial equipment and maintenance
-            services.
+            industrial equipment, chemicals,
+            installation and maintenance services.
           </p>
 
         </div>
       </section>
 
       <ProductSection />
+
+      <Services />
+
+      <Contact />
+
+      <Footer />
+
+      <WhatsAppButton />
     </>
   );
 }
