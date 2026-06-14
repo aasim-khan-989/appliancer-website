@@ -7,38 +7,39 @@ import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Home() {
-  return (
-    <>
-      <Navbar />
+return (
+<> <Navbar />
 
-      <Hero />
+  <Hero />
 
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
+  <section className="py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-6">
 
-          <h2 className="text-4xl font-bold">
-            Welcome to Appliancer
-          </h2>
+      <h2 className="text-4xl font-bold text-center">
+        Your One-Stop Destination for Appliances & Water Solutions
+      </h2>
 
-          <p className="mt-5 text-zinc-600 max-w-3xl">
-            We provide all type of Electronic Appliances, water treatment Appliances,
-            cooling solutions, RO systems,
-            industrial equipment, chemicals,
-            installation and maintenance services.
-          </p>
+      <p className="mt-6 text-zinc-600 max-w-4xl mx-auto text-center text-lg">
+        Discover a wide range of home appliances, electronic products,
+        refrigerators, air conditioners, RO systems, water chillers,
+        water coolers, water treatment equipment and more.
+        We help customers find quality products at competitive prices
+        with installation and support available when required.
+      </p>
 
-        </div>
-      </section>
+    </div>
+  </section>
 
-      <ProductSection />
+  <ProductSection />
 
-      <Services />
+  <Services />
 
-      <Contact />
+  <Contact />
 
-      <Footer />
+  <Footer />
 
-      <WhatsAppButton />
-    </>
-  );
+  <WhatsAppButton />
+</>
+
+);
 }
