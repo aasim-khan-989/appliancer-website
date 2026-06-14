@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative h-[90vh]">
+    <section className="relative h-[90vh] overflow-hidden">
 
       <video
         autoPlay
@@ -12,50 +12,57 @@ export default function Hero() {
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-950/90 via-purple-900/70 to-black/40"></div>
+
+      <div className="absolute inset-0 bg-purple-700/10"></div>
 
       <div className="relative z-10 h-full flex items-center">
+        <div className="max-w-7xl mx-auto px-6 w-full text-white">
 
-        <div className="max-w-7xl mx-auto px-6 text-white">
-
-          <span className="bg-violet-700 px-4 py-2 rounded-full text-sm">
-            Industrial & Domestic Solutions
+          <span className="inline-block bg-purple-700/90 px-5 py-2 rounded-full text-sm font-medium shadow-lg">
+            Industrial & Domestic Products and Solutions
           </span>
 
-          <h1 className="text-5xl md:text-7xl font-bold mt-6 max-w-4xl">
-            Water Treatment & Cooling Solutions
+          <h1 className="text-4xl md:text-7xl font-bold mt-6 max-w-5xl leading-tight">
+            Electronic Appliances & Water Treatment Solutions
           </h1>
 
-          <p className="mt-6 text-lg max-w-2xl text-zinc-200">
-            Electronic Appliances,RO Plants, Water Chillers, Chemicals,
-            Installation, AMC and Maintenance Services.
+          <p className="mt-6 text-lg md:text-xl max-w-3xl text-purple-100">
+            Electronic Appliances, RO Plants, Water Chillers,
+            Water Treatment Chemicals, Installation,
+            AMC and Maintenance Services.
           </p>
 
-          <div className="flex gap-4 mt-8">
+          <div className="flex flex-wrap gap-4 mt-10">
+
             <a
               href="#contact"
-              className="bg-violet-700 px-6 py-3 rounded-xl"
+              className="bg-purple-700 hover:bg-purple-800 px-6 py-3 rounded-xl font-semibold shadow-lg"
             >
               Get Quote
             </a>
 
             <a
-              href="https://wa.me/919999999999"
-              className="border border-white px-6 py-3 rounded-xl"
+              href="https://wa.me/918888668508"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl font-semibold shadow-lg"
             >
               WhatsApp
             </a>
 
             <a
-  href="tel:+918888668508"
-  className="bg-white text-violet-700 px-6 py-3 rounded-xl font-semibold"
->
-  Call Now
-</a>
+              href="tel:+918888668508"
+              className="bg-white hover:bg-zinc-100 text-purple-700 px-6 py-3 rounded-xl font-semibold shadow-lg"
+            >
+              Call Now
+            </a>
+
           </div>
 
         </div>
       </div>
+
     </section>
   );
 }
