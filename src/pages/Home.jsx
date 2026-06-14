@@ -21,7 +21,7 @@ export default function Home() {
           </h2>
 
           <p className="mt-5 text-zinc-600 max-w-3xl">
-            We provide complete water treatment,
+            We provide all type of Electronic Appliances, water treatment Appliances,
             cooling solutions, RO systems,
             industrial equipment, chemicals,
             installation and maintenance services.

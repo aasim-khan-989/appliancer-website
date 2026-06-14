@@ -11,7 +11,7 @@ export default function Navbar() {
               Appliancer
             </h1>
             <p className="text-xs text-zinc-500">
-              Water Treatment Solutions
+             Electronic Appliances, Water Treatment & Cooling Solutions
             </p>
           </div>
 

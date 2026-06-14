@@ -8,11 +8,11 @@ export default function Footer() {
         </h3>
 
         <p className="mt-4 text-zinc-300">
-          Water Treatment & Cooling Solutions
+         Electronic Appliances Water Treatment & Cooling Solutions
         </p>
 
         <p className="mt-6 text-zinc-400">
-          © 2026 Appliancer. All Rights Reserved.
+          © 2020 Appliancer. All Rights Reserved.
         </p>
 
       </div>

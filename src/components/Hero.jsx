@@ -27,7 +27,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 text-lg max-w-2xl text-zinc-200">
-            RO Plants, Water Chillers, Chemicals,
+            Electronic Appliances,RO Plants, Water Chillers, Chemicals,
             Installation, AMC and Maintenance Services.
           </p>
 

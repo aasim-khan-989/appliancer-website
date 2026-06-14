@@ -1,4 +1,44 @@
+import { useState } from "react";
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const whatsappMessage = `
+*New Inquiry from Appliancer Website*
+
+👤 Name: ${formData.name}
+
+📞 Phone: ${formData.phone}
+
+📧 Email: ${formData.email}
+
+📝 Requirement:
+${formData.message}
+`;
+
+    window.open(
+      `https://wa.me/918888668508?text=${encodeURIComponent(
+        whatsappMessage
+      )}`,
+      "_blank"
+    );
+  };
+
   return (
     <section
       id="contact"
@@ -12,33 +52,56 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-10 mt-12">
 
-            <div className="bg-white p-8 rounded-3xl shadow mb-8">
-  <h3 className="text-2xl font-bold mb-4">
-    Contact Information
-  </h3>
+          <div>
+            <div className="bg-white p-8 rounded-3xl shadow">
 
-  <p>
-    📞 +91 88886 68508
-  </p>
+              <h3 className="text-2xl font-bold mb-4">
+                Contact Information
+              </h3>
 
-  <p className="mt-3">
-    📍 Aurangabad, Maharashtra
-  </p>
+              <a
+                href="tel:+918888668508"
+                className="block text-lg text-violet-700 font-semibold hover:underline"
+              >
+                📞 +91 88886 68508
+              </a>
 
-  <p className="mt-3">
-    Sales • Installation • AMC • Maintenance
-  </p>
-</div>
+              <a
+                href="https://wa.me/918888668508"
+                target="_blank"
+                rel="noreferrer"
+                className="block mt-4 text-lg text-green-600 font-semibold hover:underline"
+              >
+                💬 WhatsApp Us
+              </a>
+
+             
+
+              <p className="mt-3 text-zinc-600">
+                Sales • Installation • AMC • Maintenance
+              </p>
+
+            </div>
+
+            <iframe
+              title="Google Map"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d937.9741511945475!2d75.34088256959804!3d19.886587398843286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDUzJzExLjciTiA3NcKwMjAnMjkuNSJF!5e0!3m2!1sen!2sin!4v1781393364214!5m2!1sen!2sin"
+              className="w-full h-[400px] rounded-3xl mt-6 shadow"
+              loading="lazy"
+            />
+          </div>
 
           <form
-            action="https://formsubmit.co/your@email.com"
-            method="POST"
+            onSubmit={handleSubmit}
             className="bg-white p-8 rounded-3xl shadow"
           >
             <input
               type="text"
               name="name"
               placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
               className="w-full border p-3 rounded-xl mb-4"
             />
 
@@ -46,6 +109,8 @@ export default function Contact() {
               type="email"
               name="email"
               placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full border p-3 rounded-xl mb-4"
             />
 
@@ -53,29 +118,30 @@ export default function Contact() {
               type="text"
               name="phone"
               placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
               className="w-full border p-3 rounded-xl mb-4"
             />
 
             <textarea
               rows="5"
               name="message"
-              placeholder="Your Requirement"
+              placeholder="Tell us your requirement..."
+              value={formData.message}
+              onChange={handleChange}
+              required
               className="w-full border p-3 rounded-xl mb-4"
             />
 
             <button
-              className="bg-violet-700 text-white px-6 py-3 rounded-xl"
+              type="submit"
+              className="w-full bg-violet-700 hover:bg-violet-800 text-white px-6 py-3 rounded-xl font-semibold"
             >
-              Send Inquiry
+              Send via WhatsApp
             </button>
           </form>
 
-          <iframe
-            title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d937.9741511945475!2d75.34088256959804!3d19.886587398843286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDUzJzExLjciTiA3NcKwMjAnMjkuNSJF!5e0!3m2!1sen!2sin!4v1781393364214!5m2!1sen!2sin" 
-            className="w-full h-[450px] rounded-3xl"
-            loading="lazy"
-          />
         </div>
       </div>
     </section>
